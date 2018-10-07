@@ -6,6 +6,7 @@ var h1 = document.querySelector("h1");
 var reset = document.querySelector("#reset");
 var easyBtn = document.querySelector("#easy");
 var hardBtn = document.querySelector("#hard");
+//event listeners here
 reset.addEventListener("click", newGame);
 easyBtn.addEventListener("click", easyMode);
 hardBtn.addEventListener("click", hardMode);
@@ -17,7 +18,6 @@ function easyMode(){
 	for(var x = 3; x < squares.length; x++){
 		squares[x].style.display= "none";
 	}
-
 	newGame();
 };
 
@@ -33,11 +33,10 @@ function hardMode(){
 
 
 function startSquares(){
-for(var i = 0; i<squares.length; i++){
-	squares[i].style.backgroundColor = colors[i];
-	squares[i].addEventListener("click", funcky);
-
-}
+	for(var i = 0; i<squares.length; i++){
+		squares[i].style.backgroundColor = colors[i];
+		squares[i].addEventListener("click", funcky);
+ 	}
 };
 
 var pickedColor = pickColor();
@@ -56,18 +55,15 @@ function newGame(){
 	h1.style.backgroundColor = document.body.style.backgroundColor;
 	reset.textContent = "NEW COLORS"
 	messageDisplay.textContent ="";
-
 }
 
 function funcky(){
 	var clickedColor = this.style.backgroundColor;
-	if (clickedColor === pickedColor)
-	{
+	if (clickedColor === pickedColor){
 		messageDisplay.textContent="You Win!";
 		changeColors(clickedColor);
 		h1.style.backgroundColor = clickedColor;
 		reset.textContent = "Play Again?"
-
 	}
 	else {
 		messageDisplay.textContent= "Wrong!";
@@ -87,7 +83,7 @@ function pickColor(){
 function generateRandomColors(num) {
 	var arr = [];
 	for(var i = 0; i < num; i++){
-	arr.push(randomColor())
+		arr.push(randomColor())
 	};
 	return arr;
 };
@@ -96,7 +92,7 @@ function randomColor(){
 	var r =  Math.floor(Math.random() * 256);
 	var g =  Math.floor(Math.random() * 256);
 	var b =  Math.floor(Math.random() * 256);
-	 return "rgb("+ r+", "+g+", "+ b+")";
-
+	return "rgb("+ r+", "+g+", "+ b+")";
 };
+
 startSquares();
