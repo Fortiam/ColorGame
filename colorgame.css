@@ -25,13 +25,18 @@ body{
 h1{
 	color: white;
 	text-align: center;
-	background-color: steelblue;
+	background: steelblue;
+	
 	margin: 0;
 	font-weight: normal;
 	text-transform: uppercase;
 	line-height: 1.1;
 	padding: 20px 0;
 }
+h1:hover {
+	background: #0575E6;
+}
+
 span{
 	color: white;
 }
@@ -39,8 +44,32 @@ span{
 	background-color: white;
 	height: 30px;
 	text-align: center;
-	
+	width: 100%;
+	display: inline-block;
 }
+
+div.span{
+	display: inline-block;
+	
+	box-sizing: border-box;
+	height: 30px;
+	width: 33.33%;
+}
+div.leftSideSpan{
+	position: absolute;
+	background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 255, 0));
+	left: 0;
+
+}
+div.centerSpan{
+	background: linear-gradient(to right, rgb(255, 255, 0), rgb(0, 255, 255));
+}
+div.rightSideSpan{
+	position: absolute;
+	background: linear-gradient(to right, rgb(0, 255, 255), rgb(0, 0, 255));
+	right:0;
+}
+
 #message{
 	color: black;
 	display: inline-block;
