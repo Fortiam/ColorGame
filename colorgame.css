@@ -63,6 +63,7 @@ div.leftSideSpan{
 }
 div.centerSpan{
 	background: linear-gradient(to right, rgb(255, 255, 0), rgb(0, 255, 255));
+	position: relative;
 }
 div.rightSideSpan{
 	position: absolute;
@@ -74,6 +75,7 @@ div.rightSideSpan{
 	color: black;
 	display: inline-block;
 	width: 20%;
+	font-size: inherit;
 }
 
 .selected {
@@ -96,6 +98,7 @@ button{
 	-moz-transition: all 0.3s;
 	-webkit-transition: all 0.3s;
 	outline: none;
+	margin-right: 10px;
 }
 button:hover {
 	color:white;
