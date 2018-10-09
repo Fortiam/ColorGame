@@ -1,18 +1,21 @@
 var squares = document.querySelectorAll(".square");
 var messageDisplay = document.querySelector("#message");
-var whatMode = 6;
+var whatMode = 9;
 var colors = generateRandomColors(whatMode);
 var h1 = document.querySelector("h1");
 var reset = document.querySelector("#reset");
 var easyBtn = document.querySelector("#easy");
+var normalBtn = document.querySelector("#normal");
 var hardBtn = document.querySelector("#hard");
 //event listeners here
 reset.addEventListener("click", newGame);
 easyBtn.addEventListener("click", easyMode);
+normalBtn.addEventListener("click", normalMode);
 hardBtn.addEventListener("click", hardMode);
 
 function easyMode(){
 	easy.classList.add("selected");
+	normal.classList.remove("selected");
 	hard.classList.remove("selected");
 	whatMode = 3;
 	for(var x = 3; x < squares.length; x++){
@@ -21,10 +24,25 @@ function easyMode(){
 	newGame();
 };
 
+function normalMode(){
+	easy.classList.remove("selected");
+	normal.classList.add("selected");
+	hard.classList.remove("selected");
+	whatMode = 6;
+	for(var addem = 0; addem < 6; addem++){
+		squares[addem].style.display="block";
+	}
+	for(var x = 6; x < squares.length; x++){
+		squares[x].style.display= "none";
+	}
+	newGame();
+}
+
 function hardMode(){
 	easy.classList.remove("selected");
+	normal.classList.remove("selected");
 	hard.classList.add("selected");
-	whatMode = 6;
+	whatMode = 9;
 	for(var x = 3; x < squares.length; x++){
 		squares[x].style.display= "block";
 	}
