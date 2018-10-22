@@ -1,7 +1,5 @@
-
-.square{
+.square {
 	width: 30%;
-	
 	padding-bottom: 30%;
 	float: left;
 	margin: 1.66%;
@@ -10,37 +8,38 @@
 	-webkit-transition: background 0.3s;
 	-moz-transition: background 0.3s;
 }
-body{
+
+body {
 	background-color: #232323;
 	margin: 0;
 	font-family: "Montserrat", "Avenir";
-
 }
 
-#container{
+#container {
 	max-width: 600px;
 	margin: 20px auto;
 }
 
-h1{
+h1 {
 	color: white;
 	text-align: center;
 	background: steelblue;
-	
 	margin: 0;
 	font-weight: normal;
 	text-transform: uppercase;
 	line-height: 1.1;
 	padding: 20px 0;
 }
+
 h1:hover {
 	background: #0575E6;
 }
 
-span{
+span {
 	color: white;
 }
-#stripe{
+
+#stripe {
 	background-color: white;
 	height: 30px;
 	text-align: center;
@@ -48,30 +47,31 @@ span{
 	display: inline-block;
 }
 
-div.span{
+div.span {
 	display: inline-block;
-	
 	box-sizing: border-box;
 	height: 30px;
 	width: 33.33%;
 }
-div.leftSideSpan{
+
+div.leftSideSpan {
 	position: absolute;
 	background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 255, 0));
 	left: 0;
-
 }
-div.centerSpan{
+
+div.centerSpan {
 	background: linear-gradient(to right, rgb(255, 255, 0), rgb(0, 255, 255));
 	position: relative;
 }
-div.rightSideSpan{
+
+div.rightSideSpan {
 	position: absolute;
 	background: linear-gradient(to right, rgb(0, 255, 255), rgb(0, 0, 255));
 	right:0;
 }
 
-#message{
+#message {
 	color: black;
 	display: inline-block;
 	width: 20%;
@@ -82,10 +82,12 @@ div.rightSideSpan{
 	background-color: steelblue;
 	color:white;
 }
-#colorDisplay{
+
+#colorDisplay {
 	font-size: 200%;
 }
-button{
+
+button {
 	border:none;
 	background: none;
 	text-transform: uppercase;
@@ -100,6 +102,7 @@ button{
 	outline: none;
 	margin-right: 10px;
 }
+
 button:hover {
 	color:white;
 	background-color: steelblue;
