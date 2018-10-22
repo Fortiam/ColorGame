@@ -1,5 +1,5 @@
 'use strict';
-// declare variables and DOM refrences
+// declare variables and DOM references
 
 let squares = document.querySelectorAll(".square");
 let messageDisplay = document.querySelector("#message");
@@ -129,4 +129,4 @@ function randomColor() {
 	return "rgb("+ r+", "+g+", "+ b+")";
 }
 
-startSquares();
+newGame();
